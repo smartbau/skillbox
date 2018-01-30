@@ -1,0 +1,1 @@
+/var/www/vhosts/smartbau.ru/qm.pro/bitrix/modules/sale/install/components/bitrix/sale.personal.order/templates/.default/bitrix//var/www/vhosts/smartbau.ru/qm.pro/bitrix/components/bitrix/sale.personal.order/templates/.default/bitrix/

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+    <style type="text/css">
+        body {
+            font-family: Georgia, Times, serif;
+            font-size: 100%;
+            color: #333;
+            background-color: #aaa;
+        }
+
+        .box {
+            position: relative;
+            width: 380px;
+            padding: 50px;
+            margin: -100px auto 0 auto;
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .box:before, .box:after {
+            position: absolute;
+            width: 40%;
+            height: 10px;
+            content: ' ';
+            left: 12px;
+            bottom: 12px;
+            background: transparent;
+            -webkit-transform: skew(-5deg) rotate(-5deg);
+            -moz-transform: skew(-5deg) rotate(-5deg);
+            -ms-transform: skew(-5deg) rotate(-5deg);
+            -o-transform: skew(-5deg) rotate(-5deg);
+            transform: skew(-5deg) rotate(-5deg);
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .box:after {
+            left: auto;
+            right: 12px;
+            -webkit-transform: skew(5deg) rotate(5deg);
+            -moz-transform: skew(5deg) rotate(5deg);
+            -ms-transform: skew(5deg) rotate(5deg);
+            -o-transform: skew(5deg) rotate(5deg);
+            transform: skew(5deg) rotate(5deg);
+        }
+
+        h1, h2 {
+            font-size: 1.6em;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            margin-top: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+<div style="width:99%; height:100px; position:absolute; top:40%; padding:0px; margin:0px; text-align:center;">
+
+    <div class="box" style=" height:200px;">
+        <img src="http://www.rusonyx.ru/images/logo_310.png"/><br/><br/>
+        <span style="display: inline-block; font-size: 27px; font-weight: normal; height: 56px; margin: 0; line-height:40px; position: relative; top: 5px;">
+		Эта страница размещена на&nbsp;хостинге Русоникс
+		</span>
+    </div>
+</div>
+
+
+<div style="width:99%; height:30px; position:absolute; bottom:25px; padding:0px; margin:0px; text-align:center;">
+    Русоникс &mdash; хостинг, где сайты работают быстро.
+</div>
+</body>
+</html>
