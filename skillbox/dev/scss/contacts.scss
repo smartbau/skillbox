@@ -1,0 +1,83 @@
+.contacts-block {
+  width: 100%;
+  float: left;
+  padding-top: 580px;
+  margin-top: -45px;
+  position: relative;
+  .contacts-text {
+    float: left;
+    width: 540px;
+
+    p {
+      float: left;
+    }
+
+    ul {
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+      float: left;
+      li {
+        float: left;
+        padding: 10px 0 0 90px;
+        margin: 10px 0;
+        width: 100%;
+        font-size: 16px;
+        color: #687687;
+        line-height: 22px;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          @extend .sprite;
+        }
+        &.address {
+          &:before {
+            @extend .sprite-li-1;
+          }
+        }
+        &.tel {
+          &:before {
+            @extend .sprite-li-2;
+          }
+        }
+        &.email {
+          color: #7accc8;
+          &:before {
+            @extend .sprite-li-3;
+          }
+        }
+        &.time {
+          line-height: 18px;
+          padding-top: 4px;
+          padding-bottom: 0;
+          span {
+            color: #1ac3e8;
+          }
+          &:before {
+            @extend .sprite-li-4;
+          }
+        }
+        span {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  form {
+    float: right;
+    width: 570px;
+  }
+}
+
+#map-canvas {
+  width: 100%;
+  height: 580px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}

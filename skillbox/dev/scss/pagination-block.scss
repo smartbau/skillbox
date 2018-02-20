@@ -1,0 +1,33 @@
+.pagination-block {
+  width: 100%;
+  float: left;
+  margin: 30px 0;
+  .pagination-page {
+    width: auto;
+    float: left;
+    margin-right: 20px;
+    .key {
+      width: auto;
+      padding: 0;
+      min-width: 37px;
+      line-height: 37px;
+      margin: 0 1px;
+    }
+  }
+  .pagination-text {
+    line-height: 37px;
+    float: right;
+  }
+  .key {
+    width: auto;
+    line-height: 37px;
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+.catalog-page {
+  .pagination-block {
+
+  }
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Продуктовая страница</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1250">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,cyrillic"
+          rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/application.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="main">
+
+    <!--Header-->
+    <header id="header" itemscope itemtype="http://schema.org/Organization">
+        <div class="wrapper header-top">
+            <div class="container">
+                <nav>
+                    <a href="#" class="button mini">Вход</a>
+                    <a href="#" class="button mini gray">Регистрация</a>
+                </nav>
+                <div class="favorites popap-show">
+                    <span>Избранное (3)</span>
+                    <div class="popap-block">
+                        <ul class="favorites-popap">
+                            <li>
+                                <div class="favorites-info">
+                                    <div class="favorites-name">
+                                        <a href="#">Tabletus sus 64GB</a>
+                                    </div>
+                                    <div class="favorites-price">
+                                        30 000 руб.
+                                    </div>
+                                </div>
+                                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="#">
+                                        <img src="temp/product-1.png" alt="" itemprop="image">
+                                    </a>
+                                </div>
+                                <div class="favorites-cart">
+                                    <form action="#" method="post">
+                                        <input type="hidden" name="product_id" value="1">
+                                        <input type="hidden" name="count" value="1">
+                                        <input type="submit" value="Добавить">
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="favorites-info">
+                                    <div class="favorites-name">
+                                        <a href="#">Monoblok Full HD 28</a>
+                                    </div>
+                                    <div class="favorites-price">
+                                        30 000 руб.
+                                    </div>
+                                </div>
+                                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="#">
+                                        <img src="temp/product-2.png" alt="" itemprop="image">
+                                    </a>
+                                </div>
+                                <div class="favorites-cart">
+                                    <form action="#" method="post">
+                                        <input type="hidden" name="product_id" value="1">
+                                        <input type="hidden" name="count" value="1">
+                                        <input type="submit" value="Добавить">
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="favorites-info">
+                                    <div class="favorites-name">
+                                        <a href="#">McBakus 17 500GB</a>
+                                    </div>
+                                    <div class="favorites-price">
+                                        30 000 руб.
+                                    </div>
+                                </div>
+                                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                                    <a href="#">
+                                        <img src="temp/product-3.png" alt="" itemprop="image">
+                                    </a>
+                                </div>
+                                <div class="favorites-cart">
+                                    <form action="#" method="post">
+                                        <input type="hidden" name="product_id" value="1">
+                                        <input type="hidden" name="count" value="1">
+                                        <input type="submit" value="Добавить">
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="favorites-clear">
+                                <form action="#" method="post">
+                                    <input type="submit" class="gray small" value="Очистить список">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="user popap-show">
+                    <a href="#">Профиль</a>
+                    <div class="popap-block">
+                        <form action="#" method="post" class="popap-form">
+                            <div class="form-line">
+                                <input type="text" placeholder="Логин или E-mail">
+                            </div>
+                            <div class="form-line">
+                                <input type="password" placeholder="Пароль">
+                            </div>
+                            <div class="form-line">
+                                <label for="check">
+                                    <input type="checkbox" name="check" class="gray">
+                                    Запомнить меня
+                                </label>
+                            </div>
+                            <div class="form-line">
+                                <input type="submit" class="button small" value="Вход">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="info">
+                <span class="tel" itemprop="telephone">
+                  8 (999) 000 00 00
+                </span>
+                    <span class="email" itemprop="email">
+                  info@shopselle.com
+                </span>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper header-nav">
+            <div class="container">
+                <a href="#" class="logo" itemprop="url">
+                    <img src="images/logo.png" alt="" itemprop="logo">
+                    <meta itemprop="name" content="Shopselle">
+                    <meta itemprop="address" content="Москва">
+                </a>
+                <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul>
+                        <li class="sub-menu popap-show active">
+                            <a href="#" itemprop="url">Главная</a>
+                            <div class="popap-block">
+                                <ul>
+                                    <li><a href="#" itemprop="url">Пример длинного меню</a></li>
+                                    <li><a href="#" itemprop="url">Меню 2</a></li>
+                                    <li><a href="#" itemprop="url">Меню 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" itemprop="url">О нас</a></li>
+                        <li><a href="#" itemprop="url">Условия</a></li>
+                        <li><a href="#" itemprop="url">FAQ</a></li>
+                        <li class="sub-menu popap-show">
+                            <a href="#" itemprop="url">Страницы</a>
+                            <div class="popap-block">
+                                <ul>
+                                    <li><a href="#" itemprop="url">Меню 1</a></li>
+                                    <li><a href="#" itemprop="url">Меню 2</a></li>
+                                    <li><a href="#" itemprop="url">Меню 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sub-menu popap-show">
+                            <a href="#" itemprop="url">Контакты</a>
+                            <div class="popap-block">
+                                <ul>
+                                    <li><a href="#" itemprop="url">Меню 1</a></li>
+                                    <li><a href="#" itemprop="url">Меню 2</a></li>
+                                    <li><a href="#" itemprop="url">Меню 3</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="cart-icon active">
+                    <a href="#"><span>+4</span></a>
+                </div>
+                <!--пустая без active и a-->
+                <!--<div class="cart-icon"></div>-->
+            </div>
+        </div>
+        <div class="wrapper nav-block">
+            <div class="container">
+                <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul>
+                        <li>
+                            <a href="#" itemprop="url">Моноблоки</a>
+                        </li>
+                        <li>
+                            <a href="#" itemprop="url">Ноутбуки</a>
+                            <img src="temp/menu-top.png" alt="">
+                        </li>
+                        <li>
+                            <a href="#" itemprop="url">Планшеты</a>
+                        </li>
+                        <li>
+                            <a href="#" itemprop="url">Телефоны</a>
+                            <img src="temp/menu-new.png" alt="">
+                        </li>
+                        <li>
+                            <a href="#" itemprop="url">Гаджеты</a>
+                        </li>
+                        <li>
+                            <a href="#" itemprop="url">Аксессуары</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <form action="#" class="search" method="get">
+                    <input type="text" placeholder="Поиск">
+                    <input type="submit" value="Поиск">
+                </form>
+            </div>
+        </div>
+    </header>
+    <!--end Header-->
+
+    <div class="content">
+        <div class="wrapper title-block">
+            <div class="container">
+                <h1 class="catalog">Карта товара</h1>
+
+                <ul class="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item">
+                            <span itemprop="name">Главная</span>
+                        </a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item">
+                            <span itemprop="name">Магазин</span>
+                        </a>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item">
+                            <span itemprop="name">Ноутбуки</span>
+                        </a>
+                        <meta itemprop="position" content="3"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <a href="#" itemprop="item">
+                            <span itemprop="name">Карта товара</span>
+                        </a>
+                        <meta itemprop="position" content="4"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Основной контент-->
+        <main class="container">
+            <section class="product-page" itemscope itemtype="http://schema.org/Product">
+
+                <div class="image-block-list">
+
+                    <div class="attr discount"></div>
+                    <!--
+                    <div class="attr top"></div>
+                    <div class="attr new"></div>
+                    <div class="attr sale"></div>
+                    -->
+
+                    <ul class="gallery">
+                        <li data-thumb="temp/product-1.png">
+                            <img src="temp/product-1.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-2.png">
+                            <img src="temp/product-2.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-3.png">
+                            <img src="temp/product-3.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-1.png">
+                            <img src="temp/product-1.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-2.png">
+                            <img src="temp/product-2.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-3.png">
+                            <img src="temp/product-3.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-1.png">
+                            <img src="temp/product-1.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-2.png">
+                            <img src="temp/product-2.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-3.png">
+                            <img src="temp/product-3.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-1.png">
+                            <img src="temp/product-1.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-2.png">
+                            <img src="temp/product-2.png" itemprop="image">
+                        </li>
+                        <li data-thumb="temp/product-3.png">
+                            <img src="temp/product-3.png" itemprop="image">
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-info-block">
+                    <div class="product-category">
+                        <a href="#">Ноутбуки</a>
+                    </div>
+                    <div class="product-name">
+                        <a href="#" itemprop="name">McKniga s231</a>
+                    </div>
+                    <div class="product-info">
+                        <div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+                        <a href="#tab-3" class="review">4 отзыва</a>
+
+                        <div class="availability">
+                            Наличие:
+                            <span>Есть</span>
+                            <!-- Нет -->
+                        </div>
+                    </div>
+                    <div class="product-favorites">
+                        <span class="ui-favorites" data-productid="1">В избранное</span>
+                        <span class="ui-share-mail" data-productid="1">Отправить другу</span>
+                    </div>
+                    <div class="product-description" itemprop="description">
+                        <p>
+                            <strong>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, reprehenderit.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, reprehenderit.
+                            </strong>
+                        </p>
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia.
+                            </li>
+                        </ul>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quia.
+                        </p>
+                    </div>
+                    <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        49 0000 руб.
+                        <meta itemprop="price" content="49 0000">
+                        <meta itemprop="priceCurrency" content="RUB">
+                    </div>
+
+                    <form action="#" class="product-add">
+                        <input type="number" name="count" min="1" max="15" value="1">
+                        <input type="hidden" name="productid" value="1">
+                        <input type="submit" value="В корзину">
+                        <!--<input type="submit" class="blue" disabled value="Уже в корзине»">-->
+                    </form>
+
+                    <div class="tags-list">
+                        Теги:
+                        <a href="#">apple</a>
+                        <a href="#">laptop</a>
+                        <a href="#">computer</a>
+                        <a href="#">visuas</a>
+                        <a href="#">sale</a>
+                        <a href="#">netebook</a>
+                        <a href="#">macbook</a>
+                    </div>
+                    <div class="social-share">
+                        Поделится:
+                        <ul class="social-icon">
+                            <li><a href="#" class="icon1"></a></li>
+                            <li><a href="#" class="icon2"></a></li>
+                            <li><a href="#" class="icon3"></a></li>
+                            <li><a href="#" class="icon4"></a></li>
+                            <li><a href="#" class="icon5"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="tabs-light">
+                    <ul class="tabs-menu">
+                        <li><a href="#tab-1">Описание</a></li>
+                        <li><a href="#tab-2">Тех. характеристики</a></li>
+                        <li><a href="#tab-3">Отзывы (4)</a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div id="tab-1">
+                            <h1>Заголовок</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt atque, ea nemo, quia
+                                perferendis reprehenderit in rem maiores velit aliquam, molestiae autem officia sint,
+                                sequi sed neque hic saepe voluptate laboriosam voluptatum nulla at temporibus. Velit id,
+                                veniam omnis facere accusantium deleniti, pariatur, corporis consectetur, fugiat quia
+                                recusandae. Ut eaque quia suscipit porro, aliquam, et reiciendis maxime qui voluptas ab
+                                dolores sit, quod illo corporis fugiat! Magni optio provident neque voluptatem, incidunt
+                                voluptates voluptate aspernatur quas ipsum dolor aperiam corrupti, doloremque tempora
+                                dolore totam accusamus sapiente beatae vero, officiis. Iure, dolorum quidem officiis
+                                fugit architecto aliquid accusantium eum beatae numquam.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quia, maxime quaerat
+                                molestiae incidunt fugiat ullam ut ea rerum amet cumque rem excepturi in quae ab a alias
+                                expedita! Fugit quas doloribus quod culpa quo distinctio id, placeat nulla optio
+                                deserunt ipsam officia ab aut voluptas molestiae. Eaque, nihil, maxime.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt atque, ea nemo, quia
+                                perferendis reprehenderit in rem maiores velit aliquam, molestiae autem officia sint,
+                                sequi sed neque hic saepe voluptate laboriosam voluptatum nulla at temporibus. Velit id,
+                                veniam omnis facere accusantium deleniti, pariatur, corporis consectetur, fugiat quia
+                                recusandae. Ut eaque quia suscipit porro, aliquam, et reiciendis maxime qui voluptas ab
+                                dolores sit, quod illo corporis fugiat! Magni optio provident neque voluptatem, incidunt
+                                voluptates voluptate aspernatur quas ipsum dolor aperiam corrupti, doloremque tempora
+                                dolore totam accusamus sapiente beatae vero, officiis. Iure, dolorum quidem officiis
+                                fugit architecto aliquid accusantium eum beatae numquam.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quia, maxime quaerat
+                                molestiae incidunt fugiat ullam ut ea rerum amet cumque rem excepturi in quae ab a alias
+                                expedita! Fugit quas doloribus quod culpa quo distinctio id, placeat nulla optio
+                                deserunt ipsam officia ab aut voluptas molestiae. Eaque, nihil, maxime.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt atque, ea nemo, quia
+                                perferendis reprehenderit in rem maiores velit aliquam, molestiae autem officia sint,
+                                sequi sed neque hic saepe voluptate laboriosam voluptatum nulla at temporibus. Velit id,
+                                veniam omnis facere accusantium deleniti, pariatur, corporis consectetur, fugiat quia
+                                recusandae. Ut eaque quia suscipit porro, aliquam, et reiciendis maxime qui voluptas ab
+                                dolores sit, quod illo corporis fugiat! Magni optio provident neque voluptatem, incidunt
+                                voluptates voluptate aspernatur quas ipsum dolor aperiam corrupti, doloremque tempora
+                                dolore totam accusamus sapiente beatae vero, officiis. Iure, dolorum quidem officiis
+                                fugit architecto aliquid accusantium eum beatae numquam.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quia, maxime quaerat
+                                molestiae incidunt fugiat ullam ut ea rerum amet cumque rem excepturi in quae ab a alias
+                                expedita! Fugit quas doloribus quod culpa quo distinctio id, placeat nulla optio
+                                deserunt ipsam officia ab aut voluptas molestiae. Eaque, nihil, maxime.
+                            </p>
+                        </div>
+                        <div id="tab-2">
+                            <h1>Особенности продукта</h1>
+                            <dl>
+                                <dt>Операционная система</dt>
+                                <dd>OS X Yosemite</dd>
+
+                                <dt>Процессор</dt>
+                                <dd>2.5GHz quad-core Intel Core i7 processor (Turbo Boost up to 3.7GHz) with 6MB shared
+                                    L3 cache
+                                </dd>
+
+                                <dt>ОЗУ</dt>
+                                <dd>16GB of 1600MHz DDR3L onboard memory</dd>
+
+                                <dt>Память</dt>
+                                <dd>512GB PCIe-based flash storage</dd>
+
+                                <dt>Экран</dt>
+                                <dd>15.4-inch (diagonal) LED-backlit display with IPS technology; 2880-by-1800
+                                    resolution
+                                </dd>
+
+                                <dt>Камера</dt>
+                                <dd>720p FaceTime HD camera</dd>
+
+                                <dt>Звук</dt>
+                                <dd>Stereo speakers</dd>
+
+                                <dt>Баттарейка и питание</dt>
+                                <dd>Up to 8 hours wireless web, Up to 8 hours iTunes movie playback, Up to 30 days
+                                    standby time
+                                </dd>
+
+                                <dt>В комплекте</dt>
+                                <dd>MacBook Pro with Retina display</dd>
+                            </dl>
+                        </div>
+                        <div id="tab-3">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-prev-next">
+                    <a href="#" class="key prev">Предыдущий</a>
+                    <a href="#" class="key next">Следующий</a>
+                </div>
+
+
+            </section>
+        </main>
+        <!--end Основной контент-->
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="footer">
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="temp/footer-logo.png" alt="">
+        </a>
+        <p>
+            Все права защищены 2015. Точка входа
+        </p>
+
+        <ul>
+            <li><a href="#"><img src="temp/paypal.png" alt=""></a></li>
+            <li><a href="#"><img src="temp/visa.png" alt=""></a></li>
+            <li><a href="#"><img src="temp/mc.png" alt=""></a></li>
+            <li><a href="#"><img src="temp/skrill.png" alt=""></a></li>
+            <li><a href="#"><img src="temp/payoneer.png" alt=""></a></li>
+        </ul>
+    </div>
+</footer>
+<!--end Footer-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/application.min.js"></script>
+</body>
+</html>

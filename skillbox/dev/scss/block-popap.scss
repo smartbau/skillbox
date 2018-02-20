@@ -1,0 +1,52 @@
+.block-popap {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  .block-bg {
+    background: #424d5a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+  }
+  .block-thanks {
+    width: 890px;
+    height: 450px;
+    padding: 30px;
+    background: #fff;
+    @include box-shadow(0, 0, 20px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    img {
+      margin: 50px;
+      width: 380px;
+    }
+    .button {
+      margin-top: 40px;
+      width: 380px;
+    }
+    p {
+      font-size: 34px;
+      color: #687687;
+    }
+    h1 {
+      font-family: $fontDefautl;
+      font-size: 49px;
+      color: #687687;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

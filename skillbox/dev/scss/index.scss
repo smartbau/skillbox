@@ -1,0 +1,377 @@
+@keyframes loading {
+  from {
+    left: 0;
+    width: 30%;
+  }
+  50% {
+    width: 50%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    width: 80%;
+  }
+  95% {
+    width: 95%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.run-animation {
+  &:before {
+    animation: loading 2s linear;
+  }
+}
+
+.content.home {
+  margin-top: 0;
+  padding: 0 0 118px;
+  main.container {
+    width: 100%;
+    .home-slider-conteiner {
+      width: 100%;
+      height: 712px;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      #loader {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 8px;
+        @include background-opacity(#fff, .4);
+        &:before {
+          display: block;
+          position: absolute;
+          content: "";
+          left: 0;
+          width: 100%;
+          height: 8px;
+          background-color: #5dcad2;
+          animation: loading 2s linear;
+        }
+
+      }
+      div {
+        float: left;
+        width: 100%;
+        height: 100%;
+      }
+      .lSAction {
+        a {
+          width: 70px;
+          height: 70px;
+          position: absolute;
+          top: 322px;
+          @include background-opacity(#fff, .4);
+          &:hover {
+            background: #546273;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            @extend .sprite;
+          }
+
+          &.lSPrev {
+            left: 0;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            &:before {
+              @extend .sprite-slide-left;
+            }
+          }
+          &.lSNext {
+            right: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            &:before {
+              @extend .sprite-slide-right;
+            }
+          }
+        }
+      }
+      .lSPager.lSpg {
+        position: absolute;
+        z-index: 12;
+        width: auto;
+        left: 0;
+        right: 0;
+        bottom: 36px;
+        li {
+          width: 12px;
+          height: 12px;
+          a {
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            opacity: .4;
+          }
+          &.active {
+            a {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .home-slider-item {
+        position: relative;
+        .home-slider-bg {
+          position: relative;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+        }
+        .container {
+          position: absolute;
+          left: 0;
+          top: 164px;
+          bottom: 164px;
+          right: 0;
+          width: 1175px;
+          z-index: 11;
+        }
+      }
+    }
+  }
+}
+
+.works-block {
+  width: 100%;
+  padding: 50px 0;
+  float: left;
+  text-align: center;
+  background: #fcfcfc url(../images/line-bg.png) repeat-x left bottom;
+  .work-item {
+    float: left;
+    width: 265px;
+    padding: 75px 0 0 0;
+    margin: 0 18px;
+    position: relative;
+    p {
+      color: #687687;
+      font-size: 22px;
+      line-height: 48px;
+      margin: 0;
+
+    }
+    span {
+      line-height: 1.2em;
+      letter-spacing: -.5px;
+      font-family: $font;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -22px;
+      @extend .sprite;
+      @extend .sprite-work-next;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      @extend .sprite;
+    }
+    &.item-1 {
+      margin-left: 0;
+      &:after {
+        display: none;
+      }
+      &:before {
+        @extend .sprite-work-1;
+      }
+    }
+    &.item-2 {
+      &:before {
+        @extend .sprite-work-2;
+      }
+    }
+    &.item-3 {
+      &:before {
+        @extend .sprite-work-3;
+      }
+    }
+    &.item-4 {
+      margin-right: 0;
+      &:before {
+        @extend .sprite-work-4;
+      }
+    }
+  }
+}
+
+.recommend-block, .producttop-block {
+  width: 100%;
+  float: left;
+  .container {
+    position: relative;
+  }
+  .slider-content {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+  }
+  h1 {
+    width: 430px;
+    float: left;
+    color: #3abcdf;
+    span {
+      color: #687687;
+    }
+    &:after {
+      background: #3abcdf;
+    }
+  }
+  &.producttop-block {
+    margin: 30px 0;
+    h1 {
+      color: #f89f1a;
+      &:after {
+        background: #f89f1a;
+      }
+    }
+    .lSPager.lSpg {
+      width: 100%;
+      margin: 20px 0 !important;
+      float: left;
+      li {
+        width: 75px;
+        height: 5px;
+        margin: 0 10px;
+        a {
+          width: 75px;
+          height: 5px;
+          background: #f6f6f6;
+        }
+        &.active {
+          a {
+            background: #fdc689;
+          }
+        }
+      }
+    }
+  }
+  form.form-category {
+    float: left;
+    margin-top: 42px;
+  }
+  .controls {
+    height: 27px;
+    position: absolute;
+    right: 5px;
+    top: 42px;
+  }
+}
+
+.banner-block {
+  width: 100%;
+  float: left;
+  a {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.product-block-list {
+  width: 100%;
+  padding-bottom: 50px;
+  float: left;
+  background: #fcfcfc;
+
+  .list-block {
+    width: 370px;
+    float: left;
+    margin: 0 30px 0 0;
+    h1 {
+      font-size: 29px;
+      span {
+        color: #687687;
+      }
+    }
+    &.new {
+      h1 {
+        color: #8dc63f;
+        &:after {
+          background: #8dc63f;
+        }
+      }
+    }
+    &.spec {
+      h1 {
+        color: #bd8cbf;
+        &:after {
+          background: #bd8cbf;
+        }
+      }
+    }
+    &.top {
+      h1 {
+        color: #ed1c24;
+        &:after {
+          background: #ed1c24;
+        }
+      }
+    }
+    &:last-child {
+      margin: 0;
+    }
+    article {
+      width: 100%;
+      float: left;
+      margin: 15px 0;
+      .image-block {
+        float: left;
+      }
+      .product-block {
+        float: right;
+        width: 250px;
+      }
+      .product-name, .product-price {
+        width: 100%;
+        float: left;
+      }
+      .product-name {
+        border-bottom: 1px solid #f6f6f6;
+        a {
+          display: block;
+          width: 100%;
+          font-size: 17px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      .product-price {
+        line-height: 48px;
+        color: #3abcdf;
+        font-size: 20px;
+      }
+      .rateit {
+        width: 100%;
+        float: left;
+        margin: 13px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,cyrillic"
+          rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/application.css">
+    <title>UI</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .float {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .float > * {
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Пример фотогалереи</h1>
+
+
+<div class="image-block-list">
+    <ul class="gallery">
+        <li data-thumb="temp/product-1.png">
+            <img src="temp/product-1.png" width="200">
+        </li>
+        <li data-thumb="temp/product-2.png">
+            <img src="temp/product-2.png">
+        </li>
+        <li data-thumb="temp/product-3.png">
+            <img src="temp/product-3.png">
+        </li>
+        <li data-thumb="temp/product-1.png">
+            <img src="temp/product-1.png">
+        </li>
+        <li data-thumb="temp/product-2.png">
+            <img src="temp/product-2.png">
+        </li>
+        <li data-thumb="temp/product-3.png">
+            <img src="temp/product-3.png">
+        </li>
+        <li data-thumb="temp/product-1.png">
+            <img src="temp/product-1.png">
+        </li>
+        <li data-thumb="temp/product-2.png">
+            <img src="temp/product-2.png">
+        </li>
+        <li data-thumb="temp/product-3.png">
+            <img src="temp/product-3.png">
+        </li>
+        <li data-thumb="temp/product-1.png">
+            <img src="temp/product-1.png">
+        </li>
+        <li data-thumb="temp/product-2.png">
+            <img src="temp/product-2.png">
+        </li>
+        <li data-thumb="temp/product-3.png">
+            <img src="temp/product-3.png">
+        </li>
+    </ul>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<h1>Все изображения центрируются.</h1>
+<p>
+    Базовый размер блока - 220 на 180, для изменения добавляем классы small и mini
+</p>
+<p>
+    Стоит помнить - изображения .png без фона.
+</p>
+<div class="float">
+    <div class="image-block" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-1.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-2.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-3.png" alt="" itemprop="image">
+        </a>
+    </div>
+</div>
+
+
+<div class="float">
+    <div class="image-block small" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-1.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block small" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-2.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block small" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-3.png" alt="" itemprop="image">
+        </a>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="float">
+    <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-1.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-2.png" alt="" itemprop="image">
+        </a>
+    </div>
+    <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="#">
+            <img src="temp/product-3.png" alt="" itemprop="image">
+        </a>
+    </div>
+</div>
+
+
+<h1>Пример блока рейтинга</h1>
+
+<div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+
+<pre>
+        //Пример ajax (вызывать $.rateit плагин не нужно)
+
+        $('.rateit').trigger('rated reset', function (e) {
+          var value = $(this).rateit('value');
+          var productID = $(this).data('productid');
+
+          $.ajax({
+            url: 'rateit.php',
+            data: { id: productID, value: value },
+            type: 'POST',
+            success: function (data) {
+              //Все ОК!
+            },
+            error: function (jxhr, msg, err) {
+              //Что-то пошло не так...
+            }
+          });
+        });
+      </pre>
+<br>
+<br>
+<br>
+
+
+<h1>Примеры вида товаров</h1>
+
+<div class="float">
+
+    <article class="product-item" itemscope itemtype="http://schema.org/Product">
+        <div class="attr discount"></div>
+        <!--
+        <div class="attr top"></div>
+        <div class="attr new"></div>
+        <div class="attr sale"></div>
+        -->
+        <div class="image-block">
+            <a href="#">
+                <img src="temp/product-1.png" alt="" itemprop="image">
+            </a>
+        </div>
+        <div class="product-block">
+            <div class="product-info">
+                <a href="#">Ноутбуки</a>
+                <div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+            </div>
+            <div class="product-name">
+                <a href="#" itemprop="name">McKniga s231</a>
+            </div>
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                49 0000 руб.
+                <meta itemprop="price" content="49 0000">
+                <meta itemprop="priceCurrency" content="RUB">
+            </div>
+            <meta itemprop="description" content="Обязательно указывайте описание товара">
+            <form action="#" class="product-add">
+                <input type="hidden" name="productid" value="1">
+                <input type="hidden" name="count" value="1">
+                <input type="submit" class="small blue" disabled value="Уже в корзине»">
+                <span class="ui-favorites">В избранное</span>
+            </form>
+        </div>
+    </article>
+
+    <article class="product-item" itemscope itemtype="http://schema.org/Product">
+
+        <!--
+        <div class="attr discount"></div>
+        <div class="attr top"></div>
+        <div class="attr new"></div>
+        <div class="attr sale"></div>
+        -->
+        <div class="image-block">
+            <a href="#">
+                <img src="temp/product-2.png" alt="" itemprop="image">
+            </a>
+        </div>
+        <div class="product-block">
+            <div class="product-info">
+                <a href="#">Ноутбуки</a>
+                <div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+            </div>
+            <div class="product-name">
+                <a href="#" itemprop="name">McKniga s231</a>
+            </div>
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                49 0000 руб.
+                <meta itemprop="price" content="49 0000">
+                <meta itemprop="priceCurrency" content="RUB">
+            </div>
+            <meta itemprop="description" content="Обязательно указывайте описание товара">
+            <form action="#" class="product-add">
+                <input type="hidden" name="productid" value="1">
+                <input type="hidden" name="count" value="1">
+                <input type="submit" class="small" value="В корзину">
+                <span class="ui-favorites">В избранное</span>
+            </form>
+        </div>
+    </article>
+
+
+    <article class="product-item" itemscope itemtype="http://schema.org/Product">
+
+        <!--
+        <div class="attr discount"></div>
+        <div class="attr top"></div>
+        <div class="attr new"></div>
+        <div class="attr sale"></div>
+        -->
+        <div class="image-block">
+            <a href="#">
+                <img src="temp/product-3.png" alt="" itemprop="image">
+            </a>
+        </div>
+        <div class="product-block">
+            <div class="product-info">
+                <a href="#">Ноутбуки</a>
+                <div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+            </div>
+            <div class="product-name">
+                <a href="#" itemprop="name">McKniga s231</a>
+            </div>
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                49 0000 руб.
+                <meta itemprop="price" content="49 0000">
+                <meta itemprop="priceCurrency" content="RUB">
+            </div>
+            <meta itemprop="description" content="Обязательно указывайте описание товара">
+            <form action="#" class="product-add">
+                <input type="hidden" name="productid" value="1">
+                <input type="hidden" name="count" value="1">
+                <input type="submit" class="small" value="В корзину">
+                <span class="ui-favorites">В избранное</span>
+            </form>
+        </div>
+    </article>
+</div>
+
+<div class="float">
+
+    <article class="product-item coll-2" itemscope itemtype="http://schema.org/Product">
+        <div class="attr discount"></div>
+        <!--
+        <div class="attr top"></div>
+        <div class="attr new"></div>
+        <div class="attr sale"></div>
+        -->
+        <div class="image-block">
+            <a href="#">
+                <img src="temp/product-1.png" alt="" itemprop="image">
+            </a>
+        </div>
+        <div class="product-block">
+            <div class="product-info">
+                <a href="#">Ноутбуки</a>
+                <div data-productid="1" class="rateit" data-rateit-value="2.5"></div>
+            </div>
+            <div class="product-name">
+                <a href="#" itemprop="name">McKniga s231</a>
+            </div>
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                49 0000 руб.
+                <meta itemprop="price" content="49 0000">
+                <meta itemprop="priceCurrency" content="RUB">
+            </div>
+            <meta itemprop="description" content="Обязательно указывайте описание товара">
+            <form action="#" class="product-add">
+                <input type="hidden" name="productid" value="1">
+                <input type="hidden" name="count" value="1">
+                <input type="submit" class="small" value="В корзину">
+                <span class="ui-favorites">В избранное</span>
+            </form>
+        </div>
+    </article>
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<h1>Добавляем класс orange, gray для смена цвета бордера</h1>
+
+
+<div class="float">
+    <div class="popap-block orange">
+        <form action="#" method="post" class="popap-form">
+            <div class="form-line">
+                <input type="text" placeholder="Логин или E-mail">
+            </div>
+            <div class="form-line">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <div class="form-line">
+                <label>
+                    <input type="checkbox" class="gray">
+                    Запомнить меня
+                </label>
+            </div>
+            <div class="form-line">
+                <input type="submit" class="button small" value="Вход">
+            </div>
+        </form>
+    </div>
+
+    <div class="popap-block gray">
+        <form action="#" method="post" class="popap-form">
+            <div class="form-line">
+                <input type="text" placeholder="Логин или E-mail">
+            </div>
+            <div class="form-line">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <div class="form-line">
+                <label>
+                    <input type="checkbox" class="gray">
+                    Запомнить меня
+                </label>
+            </div>
+            <div class="form-line">
+                <input type="submit" class="button small" value="Вход">
+            </div>
+        </form>
+    </div>
+
+    <div class="popap-block">
+        <form action="#" method="post" class="popap-form">
+            <div class="form-line">
+                <input type="text" placeholder="Логин или E-mail">
+            </div>
+            <div class="form-line">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <div class="form-line">
+                <label>
+                    <input type="checkbox" class="gray">
+                    Запомнить меня
+                </label>
+            </div>
+            <div class="form-line">
+                <input type="submit" class="button small" value="Вход">
+            </div>
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+
+<h1>Добавляем класс orange, gray для смена цвета бордера</h1>
+
+
+<div class="float">
+    <div class="popap-block orange">
+        <p>Обычный текст</p>
+    </div>
+
+    <div class="popap-block gray">
+        <p>Обычный текст</p>
+    </div>
+
+    <div class="popap-block">
+        <p>Обычный текст</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+<h1>Добавляем класс orange, gray для смена цвета бордера</h1>
+
+<div class="float">
+    <div class="popap-block">
+        <ul class="favorites-popap">
+            <li>
+                <div class="favorites-info">
+                    <div class="favorites-name">
+                        <a href="#">Tabletus sus 64GB</a>
+                    </div>
+                    <div class="favorites-price">
+                        30 000 руб.
+                    </div>
+                </div>
+                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="#">
+                        <img src="temp/product-1.png" alt="" itemprop="image">
+                    </a>
+                </div>
+                <div class="favorites-cart">
+                    <form action="#" method="post">
+                        <input type="hidden" name="product_id" value="1">
+                        <input type="hidden" name="count" value="1">
+                        <input type="submit" value="Добавить">
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="favorites-info">
+                    <div class="favorites-name">
+                        <a href="#">Monoblok Full HD 28</a>
+                    </div>
+                    <div class="favorites-price">
+                        30 000 руб.
+                    </div>
+                </div>
+                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="#">
+                        <img src="temp/product-2.png" alt="" itemprop="image">
+                    </a>
+                </div>
+                <div class="favorites-cart">
+                    <form action="#" method="post">
+                        <input type="hidden" name="product_id" value="1">
+                        <input type="hidden" name="count" value="1">
+                        <input type="submit" value="Добавить">
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="favorites-info">
+                    <div class="favorites-name">
+                        <a href="#">McBakus 17 500GB</a>
+                    </div>
+                    <div class="favorites-price">
+                        30 000 руб.
+                    </div>
+                </div>
+                <div class="image-block mini" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="#">
+                        <img src="temp/product-3.png" alt="" itemprop="image">
+                    </a>
+                </div>
+                <div class="favorites-cart">
+                    <form action="#" method="post">
+                        <input type="hidden" name="product_id" value="1">
+                        <input type="hidden" name="count" value="1">
+                        <input type="submit" value="Добавить">
+                    </form>
+                </div>
+            </li>
+            <li class="favorites-clear">
+                <form action="#" method="post">
+                    <input type="submit" class="gray small" value="Очистить список">
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<label>
+    <input type="radio" name="radio">
+    Checkbox 1
+</label>
+<br>
+<br>
+<label>
+    <input type="radio" name="radio">
+    Checkbox 2
+</label>
+
+<br>
+<br>
+<label>
+    <input type="radio" name="radio2" class="circle">
+    Банковский перевод
+</label>
+<br>
+<br>
+<label>
+    <input type="radio" name="radio2" class="circle">
+    Оплата наличными
+</label>
+
+<br><br>
+
+<label>
+    <input type="checkbox">
+    Checkbox 1
+</label>
+<br>
+<br>
+<label>
+    <input type="checkbox" checked>
+    Checkbox 2
+</label>
+<br>
+<br>
+<label>
+    <input type="checkbox" checked>
+    Checkbox 3
+</label>
+
+<br><br>
+
+
+<input type="number" min="1" max="15" value="1">
+
+<br>
+<br>
+
+<input type="text" placeholder="Введите имя">
+
+<br>
+<br>
+
+<input type="text" value="Сергей Есенин" class="focus">
+
+<br>
+<br>
+
+<select>
+    <option value="1">Росийская Федерация 1</option>
+    <option value="2">Москва</option>
+    <option value="3">Федерация 3</option>
+    <option value="4">ация 4</option>
+    <option value="5">Рося 5</option>
+    <option value="6">Росийская</option>
+    <option value="7">Рос</option>
+    <option value="8">Рия 8</option>
+    <option value="9">Росийска</option>
+    <option value="1">Росийская Федерация 1</option>
+    <option value="2">Москва</option>
+    <option value="3">Федерация 3</option>
+    <option value="4">ация 4</option>
+    <option value="5">Рося 5</option>
+    <option value="6">Росийская</option>
+    <option value="7">Рос</option>
+    <option value="8">Рия 8</option>
+    <option value="9">Росийска</option>
+</select>
+
+<br>
+<br>
+
+<select class="sort">
+    <option value="0">По названию</option>
+    <option value="1">По цене</option>
+</select>
+
+<br>
+<br>
+
+<select class="category">
+    <option value="1">Все категории</option>
+    <option value="2">Ноутбуки</option>
+</select>
+
+<br>
+<br>
+
+<br><br>
+
+<button>Вход</button>
+<input type="submit" value="Вход"> <input type="submit" value="Вход" class="orange">
+
+<br><br>
+
+<button>Зарегистрироваться</button>
+<input type="submit" value="Зарегистрироваться">
+
+<br><br>
+<h1>Разные ссылки-кнопки</h1>
+<br><br>
+
+<a href="#" class="button">Кнопка-ссылка</a> <a href="#" class="button orange">Кнопка-ссылка</a> <a href="#"
+                                                                                                    class="button gray">Кнопка-ссылка</a>
+<a href="#" class="button blue">Кнопка-ссылка</a>
+
+<br><br>
+
+<a href="#" class="button small">Кнопка-ссылка</a> <a href="#" class="button orange small">Кнопка-ссылка</a> <a href="#"
+                                                                                                                class="button gray small">Кнопка-ссылка</a>
+<a href="#" class="button blue small">Кнопка-ссылка</a>
+<a href="#" class="button blue small">Уже в корзине »</a>
+<br><br>
+
+<a href="#" class="button mini">Кнопка-ссылка</a> <a href="#" class="button orange mini">Кнопка-ссылка</a> <a href="#"
+                                                                                                              class="button gray mini">Кнопка-ссылка</a>
+<a href="#" class="button blue mini">Кнопка-ссылка</a>
+
+<br>
+<br>
+<br>
+<br>
+
+<h1>Остальная ерунда (может пригодится?)</h1>
+
+<a href="#" class="ui-delete">Удалить</a>
+<br>
+<br>
+<br>
+
+<span class="ui-favorites" data-productid="1">В избранное</span>
+<br>
+<br>
+<span class="ui-favorites active" data-productid="1">Избранное</span>
+
+<br>
+<br>
+
+<pre>
+        //Пример ajax
+
+        $('.ui-favorites').bind('click', function(){
+          var productID = $(this).data('productid');
+
+          $.ajax({
+            url: 'rateit.php',
+            data: { id: productID, value: value },
+            type: 'POST',
+            success: function (data) {
+              //Все ОК!
+            },
+            error: function (jxhr, msg, err) {
+              //Что-то пошло не так...
+            }
+          });
+        });
+      </pre>
+<br>
+<br>
+<br>
+<br>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/application.min.js"></script>
+</body>
+</html>

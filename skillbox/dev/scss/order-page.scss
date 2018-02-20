@@ -1,0 +1,112 @@
+.cart-table-mini {
+  width: 100%;
+  border: 1px solid #687687;
+  margin: 20px 0 30px 0;
+  float: left;
+  th, td {
+    border: none;
+    text-align: left;
+    padding: 20px 30px !important;
+    &.total {
+      text-align: right;
+    }
+  }
+  tr {
+    border-bottom: 1px solid #f6f6f6;
+    &:last-child {
+      border-bottom: 1px solid #687687;
+    }
+  }
+  a {
+    color: #a1a1a1;
+  }
+  span {
+    color: #687687;
+    font-weight: bold;
+  }
+  th {
+    background: #687687;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.order-page {
+  width: 100%;
+  float: left;
+  margin: 20px 0;
+  .block-cell {
+    float: left;
+    width: 565px;
+    &:last-child {
+      float: right;
+    }
+  }
+  input, select, textarea, .jqselect, .jq-selectbox__select-text {
+    width: 100%;
+  }
+  input, select, textarea, .jqselect {
+    margin: 5px 0;
+  }
+  form, h1, h2, h3, h4, h5, h6 {
+    float: left;
+    width: 100%;
+  }
+  .form-line {
+    margin: 5px 0;
+    float: left;
+    &.two-line {
+      .two-block {
+        width: 270px;
+        float: left;
+        &:last-child {
+          float: right;
+        }
+        &:first-child {
+          float: left;
+        }
+      }
+    }
+    label {
+      display: block;
+      color: #687687;
+      font-weight: bold;
+      float: left;
+      margin: 5px 0;
+      &.circle.checked {
+        color: #7accc8;
+      }
+    }
+  }
+  .checked-line {
+    margin: 35px 0;
+  }
+  .payment-block {
+    margin: 0 0 20px 0;
+
+    .payment-item {
+      padding: 15px 0;
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid #f6f6f6;
+    }
+    .payment-text {
+      display: none;
+      width: 100%;
+      float: left;
+      @include box-sizing();
+      font-weight: normal;
+      padding: 15px 30px;
+      color: #acacac;
+    }
+    label {
+      font-size: 13px;
+      &.checked {
+        .payment-text {
+          display: block;
+        }
+      }
+    }
+  }
+}

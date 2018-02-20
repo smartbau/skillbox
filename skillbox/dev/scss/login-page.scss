@@ -1,0 +1,78 @@
+.login-page {
+  width: 100%;
+  float: left;
+  .block-cell {
+    width: 570px;
+    float: left;
+    &:last-child {
+      float: right;
+    }
+  }
+  form.login-form {
+    margin-top: 33px;
+    input {
+      float: left;
+    }
+    .fb-login {
+      float: left;
+      background: url(../images/fb-login.png);
+      &:hover {
+        background: url(../images/fb-login.png);
+      }
+    }
+    .vk-login {
+      float: right;
+      background: url(../images/vk-login.png);
+      &:hover {
+        background: url(../images/vk-login.png);
+      }
+    }
+  }
+  input {
+    float: right;
+    min-width: 170px;
+  }
+  .form-line {
+    margin: 10px 0;
+    label {
+      margin: 0 0 10px 0;
+      display: inline-block;
+      color: #687687;
+      font-weight: bold;
+      &.checkbox-label {
+        font-weight: normal;
+      }
+    }
+    &.checkbox-line {
+      margin-top: 20px;
+    }
+    .re-pass {
+      float: right;
+      display: inline-block;
+      color: #e1e1e1;
+      text-decoration: none;
+      &:hover {
+        color: #7accc8;
+      }
+    }
+  }
+  .reg-form {
+    .checkbox-line {
+      label {
+        margin-top: 20px;
+      }
+    }
+  }
+  .vk-login, .fb-login {
+    width: 270px;
+    height: 42px;
+    border: none;
+    overflow: hidden;
+    text-indent: -1000px;
+    border-radius: 0;
+    line-height: 1em;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
